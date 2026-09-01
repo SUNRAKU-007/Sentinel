@@ -6,6 +6,7 @@
 from google import genai
 import json
 import time
+import streamlit as st
 
 
 # ============================================================
@@ -24,7 +25,7 @@ REQUEST_DELAY = 1
 # CREATE GEMINI CLIENT
 # ============================================================
 
-client = genai.Client()
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 
 # ============================================================
